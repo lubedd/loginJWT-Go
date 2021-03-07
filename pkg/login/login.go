@@ -40,11 +40,15 @@ var user = User{
 	Password: "password",
 }
 
-var clientsAccess map[string]string = make(map[string]string)
-var clientsRefresh map[string]string = make(map[string]string)
+var (
+	clientsAccess map[string]string = make(map[string]string)
+	clientsRefresh map[string]string = make(map[string]string)
+)
 
-const accessSecretJWT = "gkrugnrSDFK485#32384$&N"
-const refreshSecretJWT = "456SFJfhsf#js№asdk#44(*7"
+const (
+	accessSecretJWT = "gkrugnrSDFK485#32384$&N"
+	refreshSecretJWT = "456SFJfhsf#js№asdk#44(*7"
+)
 
 func Login(c *gin.Context) {
 	var u User
